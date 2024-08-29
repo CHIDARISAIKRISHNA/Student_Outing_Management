@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Placed List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: lightseagreen; 
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px; 
+            margin: 50px auto; 
+            padding: 30px; 
+            background-color: lightblue; 
+            border-radius: 15px; 
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s; 
+        }
+
+        .container:hover {
+            transform: scale(1.02); 
+            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.2); 
+        }
+
+        h1 {
+            text-align: center;
+            color: #444; 
+            font-size: 28px; 
+            margin-bottom: 20px; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        th {
+            background-color: #3f51b5;
+            color: white; 
+            text-align: left;
+            padding: 15px; 
+        }
+
+        td {
+            padding: 15px; 
+            border: 1px solid black;
+            text-align: left; 
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; 
+        }
+
+        tr:hover {
+            background-color: #e1e7f1; 
+            transition: background-color 0.3s; 
+        }
+        a {
+            text-decoration: none;
+            color: #3f51b5; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Placed List</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Phone No</th>
+                <th>Email ID</th>
+                <th>Company Name</th>
+            </tr>
+            <% connect.forEach(function(connectMember) { %>
+                <tr>
+                    <td><%= connectMember.Name %></td>
+                    <td><%= connectMember.Phone_no %></td>
+                    <td><%= connectMember.Email_id %></td>
+                    <td><%= connectMember.Company_Name %></td>
+                </tr>
+            <% }); %>
+        </table>
+    </div>
+</body>
+</html>

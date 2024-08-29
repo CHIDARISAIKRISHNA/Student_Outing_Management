@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0b0b;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f3ecec;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color:lightblue;
+            border: 1px solid #060505;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #0a0909;
+        }
+
+        th {
+            background-color:burlywood;
+            font-weight: bold;
+            color: #333;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student List</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Registration No</th>
+            <th>Phone No</th>
+            <th>Room No</th>
+        </tr>
+<% demo.forEach(function(demo) { %>
+    <tr>
+        <td><%= demo.Name %></td>
+        <td><%= demo.Reg_no %></td>
+        <td><%= demo.Phone_no %></td>
+        <td><%= demo.Room_no %></td>
+    </tr>
+<% }); %>
+
+    </table>
+</body>
+</html>

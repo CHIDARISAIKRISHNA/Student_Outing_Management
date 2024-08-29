@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0b0b;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f3ecec;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color:lightblue;
+            border: 1px solid #060505;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #0a0909;
+        }
+
+        th {
+            background-color:burlywood;
+            font-weight: bold;
+            color: #333;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <table border="1">
+        <tr>
+            <th>Registration Numbers</th>
+            <th>Name</th>
+            <th>Date Of Birth</th>
+            <th>Deptartment</th>
+            <th>Blood Group</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>Parent Name</th>
+            <th>Parent Phone Number</th>
+        </tr>
+        <% student.forEach(function(student) { %>
+            <tr>
+                <td><%= student.Reg_no %></td>
+                <td><%= student.Name %></td>
+                <td><%= student.DOB %></td>
+                <td><%= student.Dept_Name %></td>
+                <td><%= student.Blood_group %></td>
+                <td><%= student.gender %></td>
+                <td><%= student.Phone_no %></td>
+                <td><%= student.Parent_Name %></td>
+                <td><%= student.Parent_Phone_no %></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>

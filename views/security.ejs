@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons with Animation and Glow Effect</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 25px red;
+        
+        }
+        .glow-on-hover {
+            width: 260px;
+            height: 75px;
+            border: none;
+            outline: none;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .glow-blue {
+            background: #007BFF;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        .glow-red {
+            background: #FF5733;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium; 
+        }
+
+        .glow-green {
+            background: #28A745;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large; 
+        }
+
+        .glow-yellow {
+            background: #FFC107;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large; 
+        }
+
+        .glow-purple {
+            background: #6F42C1;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large; 
+        }
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 200%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+
+        .glow-blue:hover {
+            transform: scale(1.1);
+        }
+
+        .glow-red:hover {
+            transform: scale(1.2) skewX(5deg);
+        }
+
+        .glow-green:hover {
+            transform: translateX(10px) scale(1.2);
+        }
+
+        .glow-yellow:hover {
+            transform: translateX(10px) scale(1.2);
+        }
+
+        .glow-purple:hover {
+            transform: scale(1.2);
+        }
+
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        body {
+            text-align: center; 
+            margin-top: 30px; 
+            background-image: url('https://hubballidharwadinfra.com/wp-content/uploads/2021/02/iiit-dharwad.jpg');
+            background-size: cover;
+        }
+        .container {
+            position: absolute;
+            top: 20px;
+            left: 20px; 
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .shadow__btn {
+            padding: 15px 20px; 
+            border: none;
+            font-size: 16px; 
+            color: #fff;
+            border-radius: 7px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: 0.5s;
+            transition-property: box-shadow;
+            background: rgb(220, 28, 124);
+            box-shadow: 0 0 25px yellow;
+            width: 280px; 
+            display: inline-block; 
+            margin: 10px; 
+            white-space: nowrap; 
+        }
+
+        .shadow__btn:hover {
+            box-shadow: 0 0 5px rgb(0, 140, 255),
+                        0 0 25px rgb(0, 140, 255),
+                        0 0 50px rgb(0, 140, 255),
+                        0 0 100px rgb(0, 140, 255);
+        }
+
+        .logo {
+            width: 3cm; 
+            height: 3cm; 
+            margin-right: 75px; 
+        }
+
+        .header {
+            color: white;
+            text-align: left;
+            padding: 20px;
+            display: flex;
+            align-items: left;
+            justify-content: center;
+
+            text-align: center; 
+            margin-top: 10px; 
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            margin-top: 10px;
+            text-align: left; 
+        }
+
+        .logo img {
+            margin-right: 20px; 
+        }
+        h1 {
+            
+            text-align: left;
+            margin-top: -50px; 
+            padding-bottom: 10px;
+        }
+        h1 span {
+           color:blue;
+           font-size: 30PX;
+            width:35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/95/Indian_Institute_of_Information_Technology%2C_Dharwad_Logo.svg" alt="IIIt Logo" class="logo">
+        <h1><span>INDIAN INSTITUTE OF INFROMATION TECHNOLOGY, DHARWAD</span></h1>
+</div><br><br>
+    <div class="button-container">
+        <form action="se/registerform" method="GET">
+            <button class="glow-on-hover glow-blue">OUTING FORM</button>
+        </form>
+        <form action="se/password" method="GET">
+            <button class="glow-on-hover glow-red">UPDATION OF OUTING FORM</button>
+        </form>
+        <form action="se/staff" method="GET">
+            <button class="glow-on-hover glow-green">GET STAFF DETAILS</button>
+        </form>
+        <form action="se/button" method="GET">
+            <button class="glow-on-hover glow-yellow">GET STUDENT DETAILS</button>
+        </form>
+        <form action="se/connect" method="GET">
+            <button class="glow-on-hover glow-purple">PREVIOUS YEAR STUDENTS</button>
+        </form>
+        <form action="se/demo" method="GET">
+            <button class="glow-on-hover glow-red">NORMAL OUTING STUDENTS</button>
+        </form>
+        <form action="se/changepassword" method="GET">
+            <button class="glow-on-hover glow-red">CHANGE YOUR PASSWORD</button>
+</form>
+
+    </div>
+</body>
+</html>

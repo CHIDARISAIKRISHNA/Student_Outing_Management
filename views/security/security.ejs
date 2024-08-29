@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SECURITY UPDATION FORM</title>
+    <style>
+        body {
+            background-color: blueviolet;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.987);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(2, 248, 80, 0.6);
+            border-radius: 10px;
+        }
+        .user-box {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: whitesmoke;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            background: transparent;
+            transition: 0.5s;
+        }
+
+        .user-box label {
+            position: absolute;
+            top: 10px; 
+            left: 0;
+            font-size: 16px;
+            color: blueviolet;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        .user-box input:focus ~ label,
+        .user-box input:not(:placeholder-shown) ~ label,
+        .user-box input:valid ~ label {
+            top: -20px;
+            left: 0;
+            font-size: 12px;
+            color: #bdb8b8;
+        }
+
+        form a {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.5s;
+            letter-spacing: 4px;
+        }
+
+        form a:hover {
+            background: #03f40f;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px orangered,
+                        0 0 25px yellow,
+                        0 0 50px mediumorchid,
+                        0 0 100px aqua;
+        }
+        h2 {
+            background-color: yellow;
+            text-align: center;
+            color: brown;
+            font-size: 20px;
+        }
+
+        input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+            filter: invert(50%) sepia(98%) saturate(7297%) hue-rotate(324deg) brightness(102%) contrast(101%);
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/se/security/update" method="post"> <!-- Updated form action -->
+        <h2>SECURITY UPDATION FORM</h2><br>
+        <div class="user-box">
+            <input type="text" id="Reg_no" name="Reg_no" maxlength="30" required placeholder=" ">
+            <label for="Reg_no">Registration Number</label>
+        </div>
+        <div class="user-box">
+            <input 
+                type="datetime-local" 
+                id="In_time_and_date" 
+                name="In_time_and_date" 
+                placeholder=" "
+                style="padding: 10px 0; font-size: 14px; height: 40px;" 
+            >
+            <label 
+                for="In_time_and_date" 
+                style="color: blueviolet; font-size: 16px;"
+            >
+                In Time and Date
+            </label>
+        </div>
+        
+        <center>
+            <input type="submit" value="Submit" style="background-color: white;color: red;">
+        </center>
+    </form>
+
+    <br>
+
+    <form action="/se/send-late-emails" method="POST"> 
+        
+            <input type="submit" value="Send Email" style="background-color: white; color: blue;">
+           </form>
+</body>
+</html>
