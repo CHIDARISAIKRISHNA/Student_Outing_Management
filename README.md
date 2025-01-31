@@ -38,7 +38,7 @@ The **Security Checkup System** is developed for **Indian Institute of Informati
 ## Installation and Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/security-checkup-system.git
+   git clone https://github.com/CHIDARISAIKRISHNA/Student_Outing_Management
 2. Install the required dependencies:
    ```bash
    npm install
