@@ -35,7 +35,7 @@ The **Security Checkup System** is developed for **Indian Institute of Informati
 - **Database**: MongoDB (or any other relevant database system)
 - **Agile Methodology**: The project followed an iterative development process, including continuous feedback and testing cycles.
 
-## Installation and Setup
+## Setup Instructions<br>
 1. Clone the repository:
    ```bash
    git clone https://github.com/CHIDARISAIKRISHNA/Student_Outing_Management
@@ -45,7 +45,8 @@ The **Security Checkup System** is developed for **Indian Institute of Informati
 3. Run the Application:
    ```bash
    npm start
-   
+   ```
+   This will launch the application, and you should be able to access it on your local server (usually at http://localhost:3000).
 ## Usage
 Visit the homepage to access different functionalities such as registering for outings, updating forms, viewing staff and student details, etc.
 Security personnel can use secure access to update outing information.
