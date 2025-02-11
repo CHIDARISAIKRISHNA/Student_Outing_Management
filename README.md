@@ -1,4 +1,4 @@
-# Security Checkup System
+# Student Outing Management System
 
 ## Project Description
 The **Security Checkup System** is developed for **Indian Institute of Information Technology (IIIT), Dharwad** to enhance campus safety and streamline the student outing process. The system aims to solve security and student-related problems related to outings, including registering outings, updating outing forms, managing staff and student details, and more.
