@@ -28,6 +28,8 @@ The **Student Outing Management System** is developed for **Indian Institute of 
 
 7. **Change Password**: 
    - Allows users to change their password to maintain account security.
+8️ **Security Module**:
+The security personnel can enter a student’s roll number and fetch or close (deactivate) the corresponding student’s record from the database for verification or access control purposes.
 
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
